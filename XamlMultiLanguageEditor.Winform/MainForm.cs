@@ -126,12 +126,19 @@ namespace XamlMultiLanguageEditor.Winform
 
         private void LoadValues()
         {
-            listBox_values.Items.Clear();
-            var values = _langs[listBox_keys.SelectedItem as string];
-            foreach (var item in values)
+            try
             {
+            listBox_values.Items.Clear();
+                var key = listBox_keys.SelectedItem as string;
+                if (!_langs.ContainsKey(key)) return;
+                var values = _langs[key];
+            foreach (var item in values)
                 listBox_values.Items.Add($"{item.Key}:\t{item.Value}");
             }
+            catch (Exception ex)
+            {
+                // ignored
+        }
         }
 
         private void ListBox_values_SelectedIndexChanged(object sender, EventArgs e)
