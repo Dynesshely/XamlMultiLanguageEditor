@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XamlMultiLanguageEditor", "XamlMultiLanguageEditor\XamlMultiLanguageEditor.csproj", "{EFF28423-9374-4E2A-8EC6-E029B1737BF2}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XamlMultiLanguageEditor.Winform", "XamlMultiLanguageEditor.Winform\XamlMultiLanguageEditor.Winform.csproj", "{5354F9F8-6515-43FC-AF02-9D6EB1CDCB1E}"
 EndProject
 Global
@@ -13,10 +11,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{EFF28423-9374-4E2A-8EC6-E029B1737BF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EFF28423-9374-4E2A-8EC6-E029B1737BF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EFF28423-9374-4E2A-8EC6-E029B1737BF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EFF28423-9374-4E2A-8EC6-E029B1737BF2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5354F9F8-6515-43FC-AF02-9D6EB1CDCB1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5354F9F8-6515-43FC-AF02-9D6EB1CDCB1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5354F9F8-6515-43FC-AF02-9D6EB1CDCB1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
