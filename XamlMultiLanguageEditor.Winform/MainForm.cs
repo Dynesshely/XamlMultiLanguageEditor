@@ -62,7 +62,7 @@ namespace XamlMultiLanguageEditor.Winform
             {
                 var nodes = item.Value.DocumentElement?.ChildNodes;
                 if (nodes is null) continue;
-                foreach (XmlNode? node in nodes)
+                foreach (XmlNode node in nodes)
                 {
                     try
                     {
@@ -170,7 +170,7 @@ namespace XamlMultiLanguageEditor.Winform
             doc.WriteTo(xw);
         }
 
-        private void button_insert_key_Click(object sender, EventArgs e)
+        private void Button_insert_key_Click(object sender, EventArgs e)
         {
             if (listBox_keys.SelectedIndex >= 0)
             {

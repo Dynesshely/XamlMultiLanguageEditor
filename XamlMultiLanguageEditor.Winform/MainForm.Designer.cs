@@ -136,7 +136,7 @@
             this.button_insert_key.TabIndex = 9;
             this.button_insert_key.Text = "Insert Key";
             this.button_insert_key.UseVisualStyleBackColor = true;
-            this.button_insert_key.Click += new System.EventHandler(this.button_insert_key_Click);
+            this.button_insert_key.Click += new System.EventHandler(this.Button_insert_key_Click);
             // 
             // MainForm
             // 
