@@ -37,7 +37,10 @@
             this.textBox_value = new System.Windows.Forms.TextBox();
             this.button_save_value = new System.Windows.Forms.Button();
             this.textBox_key = new System.Windows.Forms.TextBox();
-            this.button_insert_key = new System.Windows.Forms.Button();
+            this.button_insert_key_after = new System.Windows.Forms.Button();
+            this.button_rename_key = new System.Windows.Forms.Button();
+            this.button_delete_key = new System.Windows.Forms.Button();
+            this.button_insert_key_before = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button_load
@@ -105,7 +108,7 @@
             // 
             this.textBox_value.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox_value.Location = new System.Drawing.Point(318, 459);
+            this.textBox_value.Location = new System.Drawing.Point(318, 468);
             this.textBox_value.Name = "textBox_value";
             this.textBox_value.Size = new System.Drawing.Size(373, 23);
             this.textBox_value.TabIndex = 6;
@@ -113,7 +116,7 @@
             // button_save_value
             // 
             this.button_save_value.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_save_value.Location = new System.Drawing.Point(697, 459);
+            this.button_save_value.Location = new System.Drawing.Point(697, 468);
             this.button_save_value.Name = "button_save_value";
             this.button_save_value.Size = new System.Drawing.Size(75, 23);
             this.button_save_value.TabIndex = 7;
@@ -123,27 +126,60 @@
             // 
             // textBox_key
             // 
-            this.textBox_key.Location = new System.Drawing.Point(12, 459);
+            this.textBox_key.Location = new System.Drawing.Point(12, 468);
             this.textBox_key.Name = "textBox_key";
-            this.textBox_key.Size = new System.Drawing.Size(199, 23);
+            this.textBox_key.Size = new System.Drawing.Size(300, 23);
             this.textBox_key.TabIndex = 8;
             // 
-            // button_insert_key
+            // button_insert_key_after
             // 
-            this.button_insert_key.Location = new System.Drawing.Point(217, 459);
-            this.button_insert_key.Name = "button_insert_key";
-            this.button_insert_key.Size = new System.Drawing.Size(95, 23);
-            this.button_insert_key.TabIndex = 9;
-            this.button_insert_key.Text = "Insert Key";
-            this.button_insert_key.UseVisualStyleBackColor = true;
-            this.button_insert_key.Click += new System.EventHandler(this.Button_insert_key_Click);
+            this.button_insert_key_after.Location = new System.Drawing.Point(12, 497);
+            this.button_insert_key_after.Name = "button_insert_key_after";
+            this.button_insert_key_after.Size = new System.Drawing.Size(95, 23);
+            this.button_insert_key_after.TabIndex = 9;
+            this.button_insert_key_after.Text = "Insert After";
+            this.button_insert_key_after.UseVisualStyleBackColor = true;
+            this.button_insert_key_after.Click += new System.EventHandler(this.Button_insert_key_after_Click);
+            // 
+            // button_rename_key
+            // 
+            this.button_rename_key.Location = new System.Drawing.Point(113, 497);
+            this.button_rename_key.Name = "button_rename_key";
+            this.button_rename_key.Size = new System.Drawing.Size(75, 23);
+            this.button_rename_key.TabIndex = 10;
+            this.button_rename_key.Text = "Rename";
+            this.button_rename_key.UseVisualStyleBackColor = true;
+            this.button_rename_key.Click += new System.EventHandler(this.Button_rename_key_Click);
+            // 
+            // button_delete_key
+            // 
+            this.button_delete_key.Location = new System.Drawing.Point(113, 526);
+            this.button_delete_key.Name = "button_delete_key";
+            this.button_delete_key.Size = new System.Drawing.Size(75, 23);
+            this.button_delete_key.TabIndex = 11;
+            this.button_delete_key.Text = "Delete";
+            this.button_delete_key.UseVisualStyleBackColor = true;
+            this.button_delete_key.Click += new System.EventHandler(this.Button_delete_key_Click);
+            // 
+            // button_insert_key_before
+            // 
+            this.button_insert_key_before.Location = new System.Drawing.Point(12, 526);
+            this.button_insert_key_before.Name = "button_insert_key_before";
+            this.button_insert_key_before.Size = new System.Drawing.Size(95, 23);
+            this.button_insert_key_before.TabIndex = 12;
+            this.button_insert_key_before.Text = "Insert Before";
+            this.button_insert_key_before.UseVisualStyleBackColor = true;
+            this.button_insert_key_before.Click += new System.EventHandler(this.Button_insert_key_before_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
-            this.Controls.Add(this.button_insert_key);
+            this.Controls.Add(this.button_insert_key_before);
+            this.Controls.Add(this.button_delete_key);
+            this.Controls.Add(this.button_rename_key);
+            this.Controls.Add(this.button_insert_key_after);
             this.Controls.Add(this.textBox_key);
             this.Controls.Add(this.button_save_value);
             this.Controls.Add(this.textBox_value);
@@ -173,7 +209,10 @@
         private System.Windows.Forms.TextBox textBox_value;
         private System.Windows.Forms.Button button_save_value;
         private System.Windows.Forms.TextBox textBox_key;
-        private System.Windows.Forms.Button button_insert_key;
+        private System.Windows.Forms.Button button_insert_key_after;
+        private System.Windows.Forms.Button button_rename_key;
+        private System.Windows.Forms.Button button_delete_key;
+        private System.Windows.Forms.Button button_insert_key_before;
     }
 }
 
