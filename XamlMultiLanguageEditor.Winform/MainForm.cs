@@ -282,11 +282,11 @@ namespace XamlMultiLanguageEditor.Winform
                 return;
             }
 
-            if (listBox_keys.SelectedIndex < 0) return;
+            var index = listBox_keys.SelectedIndex;
+            if (index < 0) return;
 
             try
             {
-                var index = listBox_keys.SelectedIndex;
                 foreach (var lang in _languages)
                 {
                     var doc = lang.Value;
@@ -294,7 +294,7 @@ namespace XamlMultiLanguageEditor.Winform
                     nodes[index].Attributes["x:Key"].InnerText = textBox_key.Text;
                 }
                 SaveAllXml();
-                string key = listBox_keys.SelectedItem as string;
+                var key = listBox_keys.SelectedItem as string;
                 var dict = _langs[key];
                 _langs.Remove(key);
                 _langs.Add(textBox_key.Text, dict);
