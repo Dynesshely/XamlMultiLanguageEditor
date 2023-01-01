@@ -128,17 +128,17 @@ namespace XamlMultiLanguageEditor.Winform
         {
             try
             {
-            listBox_values.Items.Clear();
+                listBox_values.Items.Clear();
                 var key = listBox_keys.SelectedItem as string;
                 if (!_langs.ContainsKey(key)) return;
                 var values = _langs[key];
-            foreach (var item in values)
-                listBox_values.Items.Add($"{item.Key}:\t{item.Value}");
+                foreach (var item in values)
+                    listBox_values.Items.Add($"{item.Key}:\t{item.Value}");
             }
             catch (Exception ex)
             {
                 // ignored
-        }
+            }
         }
 
         private void ListBox_values_SelectedIndexChanged(object sender, EventArgs e)
@@ -312,7 +312,29 @@ namespace XamlMultiLanguageEditor.Winform
 
         private void Button_delete_key_Click(object sender, EventArgs e)
         {
+            var index = listBox_keys.SelectedIndex;
+            if (index < 0) return;
 
+            try
+            {
+                foreach (var lang in _languages)
+                {
+                    var doc = lang.Value;
+                    var root = doc.DocumentElement;
+                    var nodes = root.ChildNodes;
+                    root.RemoveChild(nodes[index]);
+                }
+                SaveAllXml();
+                var key = listBox_keys.SelectedItem as string;
+                _langs.Remove(key);
+                listBox_keys.SelectedIndex = -1;
+                listBox_keys.Items.RemoveAt(index);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"{ex.Message}\r\n{ex}",
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
