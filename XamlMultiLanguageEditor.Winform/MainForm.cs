@@ -107,21 +107,24 @@ namespace XamlMultiLanguageEditor.Winform
         {
             listBox_keys.Items.Clear();
             foreach (var item in _langs)
-            {
                 listBox_keys.Items.Add(item.Key);
-            }
+            comboBox_langs.Items.Clear();
+            foreach (var item in _languages.Keys)
+                comboBox_langs.Items.Add(item);
         }
 
         private void RestoreUI()
         {
             listBox_keys.Items.Clear();
             listBox_values.Items.Clear();
+            comboBox_langs.Items.Clear();
         }
 
         private void ListBox_keys_SelectedIndexChanged(object sender, EventArgs e)
         {
             textBox_key.Text = listBox_keys.SelectedItem as string;
-            LoadValues();
+            if (listBox_keys.SelectedIndex >= 0)
+                LoadValues();
         }
 
         private void LoadValues()
@@ -143,7 +146,11 @@ namespace XamlMultiLanguageEditor.Winform
 
         private void ListBox_values_SelectedIndexChanged(object sender, EventArgs e)
         {
-            textBox_value.Text = RemoveLangKey(listBox_values.SelectedItem as string);
+            if (listBox_values.SelectedIndex >= 0)
+                textBox_value.Text = RemoveLangKey(listBox_values.SelectedItem as string);
+            var lang = RemoveLangValue(listBox_values.SelectedItem as string);
+            comboBox_langs.SelectedItem = lang;
+            textBox_lang_name.Text = lang;
         }
 
         private string RemoveLangKey(string str)
@@ -165,9 +172,16 @@ namespace XamlMultiLanguageEditor.Winform
 
         private string RemoveLangValue(string str)
         {
-            foreach (var key in _languages.Keys)
-                if (str.StartsWith(key)) return key;
-            return string.Empty;
+            try
+            {
+                foreach (var key in _languages.Keys)
+                    if (str.StartsWith(key)) return key;
+                return string.Empty;
+            }
+            catch (Exception ex)
+            {
+                return string.Empty;
+            }
         }
 
         private void Button_save_value_Click(object sender, EventArgs e)
@@ -334,6 +348,35 @@ namespace XamlMultiLanguageEditor.Winform
             {
                 MessageBox.Show($"{ex.Message}\r\n{ex}",
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void Button_create_lang_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var baselang = _paths[comboBox_langs.SelectedItem as string];
+                var destpath = $"{Path.GetDirectoryName(baselang)}/" +
+                    $"{textBox_lang_name.Text}{Path.GetExtension(baselang)}";
+                destpath = Path.GetFullPath(destpath);
+                File.Copy(baselang, destpath);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"{ex.Message}\r\n{ex}",
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void Button_delete_lang_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                File.Delete(_paths[RemoveLangValue(listBox_values.SelectedItem as string)]);
+            }
+            catch (Exception ex)
+            {
+                // ignored
             }
         }
     }
