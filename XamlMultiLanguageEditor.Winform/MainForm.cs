@@ -46,6 +46,9 @@ namespace XamlMultiLanguageEditor.Winform
 
         private const string ns_x = "http://schemas.microsoft.com/winfx/2006/xaml";
 
+        private string _ex1 = string.Empty;
+        private string _ex2 = string.Empty;
+
         private void Button_load_Click(object sender, EventArgs e)
         {
             _languages.Clear();
@@ -95,7 +98,8 @@ namespace XamlMultiLanguageEditor.Winform
                     }
                     catch (Exception ex)
                     {
-                        // ignored
+                        _ex1 = ex.Message;
+                        _ex2 = _ex1;
                     }
                 }
 
@@ -140,7 +144,8 @@ namespace XamlMultiLanguageEditor.Winform
             }
             catch (Exception ex)
             {
-                // ignored
+                _ex2 = ex.Message;
+                _ex1 = _ex2;
             }
         }
 
@@ -180,6 +185,8 @@ namespace XamlMultiLanguageEditor.Winform
             }
             catch (Exception ex)
             {
+                _ex1 = ex.Message;
+                _ex2 = _ex1;
                 return string.Empty;
             }
         }
@@ -278,7 +285,7 @@ namespace XamlMultiLanguageEditor.Winform
             _langs.Add(key, dict);
         }
 
-        private XmlNode CreateNode(ref XmlDocument doc, string key, string value)
+        private static XmlNode CreateNode(ref XmlDocument doc, string key, string value)
         {
             var node = doc.CreateElement("x:String", ns_x);
             var attribute = doc.CreateAttribute("x:Key", ns_x);
@@ -376,7 +383,8 @@ namespace XamlMultiLanguageEditor.Winform
             }
             catch (Exception ex)
             {
-                // ignored
+                _ex1 = ex.Message;
+                _ex2 = _ex1;
             }
         }
     }
