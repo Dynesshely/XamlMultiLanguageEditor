@@ -129,6 +129,18 @@ namespace XamlMultiLanguageEditor.Winform
             textBox_key.Text = listBox_keys.SelectedItem as string;
             if (listBox_keys.SelectedIndex >= 0)
                 LoadValues();
+            if (comboBox_langs.SelectedIndex >= 0)
+            {
+                for (int i = 0; i < listBox_values.Items.Count; ++i)
+                {
+                    if (listBox_values.Items[i].ToString().StartsWith(comboBox_langs.SelectedItem as string))
+                    {
+                        listBox_values.SelectedIndex = i;
+                        break;
+                    }
+                }
+            }
+
         }
 
         private void LoadValues()
