@@ -1,18 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
-namespace XamlMultiLanguageEditor.Winform
+namespace XamlMultiLanguageEditor.Winform;
+
+internal class Messages
 {
-    internal class Messages
+    internal static void ShowDumplicatedKeyTip(string tip = "")
     {
-        internal static void ShowDumplicatedKeyTip(string tip = "")
-        {
-            MessageBox.Show($"This key already existed.\r\n{tip}", "Error",
-                MessageBoxButtons.OK, MessageBoxIcon.Error);
-        }
+        MessageBox.Show(
+            $"This key already existed.\r\n{tip}",
+            "Error",
+            MessageBoxButtons.OK,
+            MessageBoxIcon.Error
+        );
     }
 }

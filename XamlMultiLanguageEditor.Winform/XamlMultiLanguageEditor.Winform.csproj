@@ -6,6 +6,16 @@
         <UseWindowsForms>true</UseWindowsForms>
         <ApplicationIcon>icon.ico</ApplicationIcon>
         <Nullable>enable</Nullable>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <Authors>Dynesshely,StardustSeemsInk</Authors>
+        <Copyright>Copyright © Dynesshely 2024</Copyright>
+        <Description>
+            An editor for xaml multi-language files.
+            Repo: https://github.com/Dynesshely/XamlMultiLanguageEditor
+        </Description>
     </PropertyGroup>
 
     <ItemGroup>

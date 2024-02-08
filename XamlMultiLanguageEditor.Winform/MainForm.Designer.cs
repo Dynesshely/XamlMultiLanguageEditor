@@ -47,10 +47,13 @@
             textBox_lang_name = new System.Windows.Forms.TextBox();
             label3 = new System.Windows.Forms.Label();
             button_delete_lang = new System.Windows.Forms.Button();
+            button_theme = new System.Windows.Forms.Button();
+            button_about = new System.Windows.Forms.Button();
             SuspendLayout();
             // 
             // button_load
             // 
+            button_load.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             button_load.Location = new System.Drawing.Point(12, 12);
             button_load.Name = "button_load";
             button_load.Size = new System.Drawing.Size(75, 23);
@@ -62,6 +65,7 @@
             // textBox_path
             // 
             textBox_path.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            textBox_path.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             textBox_path.Location = new System.Drawing.Point(93, 12);
             textBox_path.Name = "textBox_path";
             textBox_path.Size = new System.Drawing.Size(679, 23);
@@ -69,19 +73,21 @@
             // 
             // listBox_keys
             // 
+            listBox_keys.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
+            listBox_keys.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             listBox_keys.FormattingEnabled = true;
             listBox_keys.HorizontalScrollbar = true;
             listBox_keys.ItemHeight = 17;
-            listBox_keys.Location = new System.Drawing.Point(12, 58);
+            listBox_keys.Location = new System.Drawing.Point(12, 68);
             listBox_keys.Name = "listBox_keys";
-            listBox_keys.Size = new System.Drawing.Size(300, 395);
+            listBox_keys.Size = new System.Drawing.Size(300, 376);
             listBox_keys.TabIndex = 2;
             listBox_keys.SelectedIndexChanged += ListBox_keys_SelectedIndexChanged;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(12, 38);
+            label1.Location = new System.Drawing.Point(12, 43);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(35, 17);
             label1.TabIndex = 3;
@@ -90,7 +96,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new System.Drawing.Point(318, 38);
+            label2.Location = new System.Drawing.Point(318, 43);
             label2.Name = "label2";
             label2.Size = new System.Drawing.Size(46, 17);
             label2.TabIndex = 5;
@@ -98,19 +104,21 @@
             // 
             // listBox_values
             // 
-            listBox_values.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            listBox_values.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            listBox_values.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             listBox_values.FormattingEnabled = true;
             listBox_values.HorizontalScrollbar = true;
             listBox_values.ItemHeight = 17;
-            listBox_values.Location = new System.Drawing.Point(318, 58);
+            listBox_values.Location = new System.Drawing.Point(318, 68);
             listBox_values.Name = "listBox_values";
-            listBox_values.Size = new System.Drawing.Size(454, 395);
+            listBox_values.Size = new System.Drawing.Size(454, 376);
             listBox_values.TabIndex = 4;
             listBox_values.SelectedIndexChanged += ListBox_values_SelectedIndexChanged;
             // 
             // textBox_value
             // 
-            textBox_value.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            textBox_value.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
+            textBox_value.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             textBox_value.Location = new System.Drawing.Point(318, 459);
             textBox_value.Name = "textBox_value";
             textBox_value.Size = new System.Drawing.Size(373, 23);
@@ -118,7 +126,8 @@
             // 
             // button_save_value
             // 
-            button_save_value.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
+            button_save_value.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
+            button_save_value.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             button_save_value.Location = new System.Drawing.Point(697, 459);
             button_save_value.Name = "button_save_value";
             button_save_value.Size = new System.Drawing.Size(75, 23);
@@ -129,6 +138,8 @@
             // 
             // textBox_key
             // 
+            textBox_key.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
+            textBox_key.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             textBox_key.Location = new System.Drawing.Point(12, 459);
             textBox_key.Name = "textBox_key";
             textBox_key.Size = new System.Drawing.Size(300, 23);
@@ -136,6 +147,8 @@
             // 
             // button_insert_key_after
             // 
+            button_insert_key_after.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
+            button_insert_key_after.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             button_insert_key_after.Location = new System.Drawing.Point(12, 488);
             button_insert_key_after.Name = "button_insert_key_after";
             button_insert_key_after.Size = new System.Drawing.Size(95, 28);
@@ -146,6 +159,8 @@
             // 
             // button_rename_key
             // 
+            button_rename_key.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
+            button_rename_key.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             button_rename_key.Location = new System.Drawing.Point(113, 488);
             button_rename_key.Name = "button_rename_key";
             button_rename_key.Size = new System.Drawing.Size(75, 28);
@@ -156,6 +171,8 @@
             // 
             // button_delete_key
             // 
+            button_delete_key.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
+            button_delete_key.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             button_delete_key.Location = new System.Drawing.Point(113, 521);
             button_delete_key.Name = "button_delete_key";
             button_delete_key.Size = new System.Drawing.Size(75, 28);
@@ -166,6 +183,8 @@
             // 
             // button_insert_key_before
             // 
+            button_insert_key_before.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
+            button_insert_key_before.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             button_insert_key_before.Location = new System.Drawing.Point(12, 521);
             button_insert_key_before.Name = "button_insert_key_before";
             button_insert_key_before.Size = new System.Drawing.Size(95, 28);
@@ -176,6 +195,9 @@
             // 
             // comboBox_langs
             // 
+            comboBox_langs.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
+            comboBox_langs.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            comboBox_langs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             comboBox_langs.FormattingEnabled = true;
             comboBox_langs.Location = new System.Drawing.Point(382, 524);
             comboBox_langs.Name = "comboBox_langs";
@@ -184,6 +206,8 @@
             // 
             // button_create_lang
             // 
+            button_create_lang.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
+            button_create_lang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             button_create_lang.Location = new System.Drawing.Point(448, 488);
             button_create_lang.Name = "button_create_lang";
             button_create_lang.Size = new System.Drawing.Size(75, 28);
@@ -194,6 +218,8 @@
             // 
             // textBox_lang_name
             // 
+            textBox_lang_name.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
+            textBox_lang_name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             textBox_lang_name.Location = new System.Drawing.Point(318, 491);
             textBox_lang_name.Name = "textBox_lang_name";
             textBox_lang_name.Size = new System.Drawing.Size(124, 23);
@@ -201,6 +227,7 @@
             // 
             // label3
             // 
+            label3.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
             label3.AutoSize = true;
             label3.Location = new System.Drawing.Point(318, 527);
             label3.Name = "label3";
@@ -210,6 +237,8 @@
             // 
             // button_delete_lang
             // 
+            button_delete_lang.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
+            button_delete_lang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             button_delete_lang.Location = new System.Drawing.Point(651, 488);
             button_delete_lang.Name = "button_delete_lang";
             button_delete_lang.Size = new System.Drawing.Size(121, 28);
@@ -218,11 +247,37 @@
             button_delete_lang.UseVisualStyleBackColor = true;
             button_delete_lang.Click += Button_delete_lang_Click;
             // 
+            // button_theme
+            // 
+            button_theme.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
+            button_theme.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            button_theme.Location = new System.Drawing.Point(720, 521);
+            button_theme.Name = "button_theme";
+            button_theme.Size = new System.Drawing.Size(52, 28);
+            button_theme.TabIndex = 17;
+            button_theme.Text = "☀";
+            button_theme.UseVisualStyleBackColor = true;
+            button_theme.Click += Button_theme_Click;
+            // 
+            // button_about
+            // 
+            button_about.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
+            button_about.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            button_about.Location = new System.Drawing.Point(651, 521);
+            button_about.Name = "button_about";
+            button_about.Size = new System.Drawing.Size(63, 28);
+            button_about.TabIndex = 18;
+            button_about.Text = "About";
+            button_about.UseVisualStyleBackColor = true;
+            button_about.Click += Button_about_Click;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(784, 561);
+            Controls.Add(button_about);
+            Controls.Add(button_theme);
             Controls.Add(button_delete_lang);
             Controls.Add(label3);
             Controls.Add(textBox_lang_name);
@@ -270,6 +325,8 @@
         private System.Windows.Forms.TextBox textBox_lang_name;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button_delete_lang;
+        private System.Windows.Forms.Button button_theme;
+        private System.Windows.Forms.Button button_about;
     }
 }
 
