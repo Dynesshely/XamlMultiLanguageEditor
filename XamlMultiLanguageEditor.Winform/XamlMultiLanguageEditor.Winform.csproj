@@ -1,14 +1,29 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <OutputType>WinExe</OutputType>
-    <TargetFramework>net6.0-windows</TargetFramework>
-    <UseWindowsForms>true</UseWindowsForms>
-    <ApplicationIcon>icon.ico</ApplicationIcon>
-  </PropertyGroup>
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net8.0-windows</TargetFramework>
+        <UseWindowsForms>true</UseWindowsForms>
+        <ApplicationIcon>icon.ico</ApplicationIcon>
+        <Nullable>enable</Nullable>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    </PropertyGroup>
 
-  <ItemGroup>
-    <Content Include="icon.ico" />
-  </ItemGroup>
+    <PropertyGroup>
+        <Authors>Dynesshely,StardustSeemsInk</Authors>
+        <Copyright>Copyright © Dynesshely 2024</Copyright>
+        <Description>
+            An editor for xaml multi-language files.
+            Repo: https://github.com/Dynesshely/XamlMultiLanguageEditor
+        </Description>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Content Include="icon.ico" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="CommandLineParser" Version="2.9.1" />
+    </ItemGroup>
 
 </Project>
