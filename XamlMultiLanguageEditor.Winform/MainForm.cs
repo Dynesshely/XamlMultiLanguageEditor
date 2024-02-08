@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CommandLine;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -37,12 +38,24 @@ namespace XamlMultiLanguageEditor.Winform
                 // ignored
             }
 #endif
+
+            Load += MainForm_Load;
         }
 
-        private readonly Dictionary<string, XmlDocument> _languages = new();
-        private readonly Dictionary<string, string> _paths = new();
-        private readonly Dictionary<string, Dictionary<string, string>> _langs
-            = new();
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            Parser.Default.ParseArguments<Options.Options>(Environment.GetCommandLineArgs())
+                .WithParsed(options =>
+                {
+                    textBox_path.Text = Path.GetFullPath(options.LoadTarget!);
+
+                    Button_load_Click(this, new());
+                });
+        }
+
+        private readonly Dictionary<string, XmlDocument> _languages = [];
+        private readonly Dictionary<string, string> _paths = [];
+        private readonly Dictionary<string, Dictionary<string, string>> _langs = [];
 
         private const string ns_x = "http://schemas.microsoft.com/winfx/2006/xaml";
 
@@ -58,20 +71,28 @@ namespace XamlMultiLanguageEditor.Winform
             LoadFromDisk();
 
             RestoreUI();
+
             DrawUI();
         }
 
         private void LoadFromDisk()
         {
             var path = textBox_path.Text;
+
             if (path is null) return;
+
             path = Path.GetFullPath(path);
+
             if (!Directory.Exists(path)) return;
+
             var dir = new DirectoryInfo(path);
+
             var files = dir.GetFiles();
+
             foreach (var file in files)
             {
                 var key = Path.GetFileNameWithoutExtension(file.FullName);
+
                 _paths.Add(key, file.FullName);
                 _languages.Add(key, new XmlDocument());
                 _languages[key].Load(file.FullName);
