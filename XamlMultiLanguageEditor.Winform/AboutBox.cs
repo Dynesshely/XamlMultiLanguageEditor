@@ -1,12 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
-using System;
 using System.Reflection;
 using System.Runtime.InteropServices;
+using System.Text;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using static XamlMultiLanguageEditor.Winform.FormUtils;
-using System.Text.RegularExpressions;
-using System.Text;
 
 namespace XamlMultiLanguageEditor.Winform
 {

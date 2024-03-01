@@ -1,5 +1,4 @@
-﻿using CommandLine;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Drawing;
@@ -9,6 +8,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Forms;
 using System.Xml;
+using CommandLine;
 using static XamlMultiLanguageEditor.Winform.FormUtils;
 
 namespace XamlMultiLanguageEditor.Winform;
