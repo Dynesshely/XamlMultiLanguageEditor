@@ -5,6 +5,16 @@ VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XamlMultiLanguageEditor.Winform", "XamlMultiLanguageEditor.Winform\XamlMultiLanguageEditor.Winform.csproj", "{5354F9F8-6515-43FC-AF02-9D6EB1CDCB1E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "XamlMultiLanguageEditor.EtoForms", "XamlMultiLanguageEditor.EtoForms", "{D4FE29A6-BA98-42FE-847F-672327E474C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamlMultiLanguageEditor.EtoForms", "XamlMultiLanguageEditor.EtoForms\XamlMultiLanguageEditor.EtoForms\XamlMultiLanguageEditor.EtoForms.csproj", "{2BBFA76B-DB0F-412D-9461-47C89267DA69}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamlMultiLanguageEditor.EtoForms.Gtk", "XamlMultiLanguageEditor.EtoForms\XamlMultiLanguageEditor.EtoForms.Gtk\XamlMultiLanguageEditor.EtoForms.Gtk.csproj", "{962256D9-B73E-42B2-A48A-A1D449C19B55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamlMultiLanguageEditor.EtoForms.Mac", "XamlMultiLanguageEditor.EtoForms\XamlMultiLanguageEditor.EtoForms.Mac\XamlMultiLanguageEditor.EtoForms.Mac.csproj", "{4848A1F3-41F7-4A39-BDED-28110844A97D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamlMultiLanguageEditor.EtoForms.Wpf", "XamlMultiLanguageEditor.EtoForms\XamlMultiLanguageEditor.EtoForms.Wpf\XamlMultiLanguageEditor.EtoForms.Wpf.csproj", "{01B42B79-F73A-4EF5-B56A-A18ECE59B0D9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,11 +25,33 @@ Global
 		{5354F9F8-6515-43FC-AF02-9D6EB1CDCB1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5354F9F8-6515-43FC-AF02-9D6EB1CDCB1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5354F9F8-6515-43FC-AF02-9D6EB1CDCB1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BBFA76B-DB0F-412D-9461-47C89267DA69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BBFA76B-DB0F-412D-9461-47C89267DA69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BBFA76B-DB0F-412D-9461-47C89267DA69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BBFA76B-DB0F-412D-9461-47C89267DA69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{962256D9-B73E-42B2-A48A-A1D449C19B55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{962256D9-B73E-42B2-A48A-A1D449C19B55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{962256D9-B73E-42B2-A48A-A1D449C19B55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{962256D9-B73E-42B2-A48A-A1D449C19B55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4848A1F3-41F7-4A39-BDED-28110844A97D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4848A1F3-41F7-4A39-BDED-28110844A97D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4848A1F3-41F7-4A39-BDED-28110844A97D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4848A1F3-41F7-4A39-BDED-28110844A97D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01B42B79-F73A-4EF5-B56A-A18ECE59B0D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01B42B79-F73A-4EF5-B56A-A18ECE59B0D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01B42B79-F73A-4EF5-B56A-A18ECE59B0D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01B42B79-F73A-4EF5-B56A-A18ECE59B0D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CD01D0FE-87D5-4481-9B5F-DD3DBB4707C2}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2BBFA76B-DB0F-412D-9461-47C89267DA69} = {D4FE29A6-BA98-42FE-847F-672327E474C1}
+		{962256D9-B73E-42B2-A48A-A1D449C19B55} = {D4FE29A6-BA98-42FE-847F-672327E474C1}
+		{4848A1F3-41F7-4A39-BDED-28110844A97D} = {D4FE29A6-BA98-42FE-847F-672327E474C1}
+		{01B42B79-F73A-4EF5-B56A-A18ECE59B0D9} = {D4FE29A6-BA98-42FE-847F-672327E474C1}
 	EndGlobalSection
 EndGlobal
