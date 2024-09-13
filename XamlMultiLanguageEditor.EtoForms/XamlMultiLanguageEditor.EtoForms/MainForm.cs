@@ -7,8 +7,9 @@ public partial class MainForm : Form
 {
     public MainForm()
     {
-        Title = "My Eto Form";
-        MinimumSize = new Size(200, 200);
+        Title = "XAML Multi-Language Editor";
+        ClientSize = new Size(800, 600);
+        MinimumSize = new Size(600, 450);
 
         Content = new StackLayout
         {
@@ -48,8 +49,5 @@ public partial class MainForm : Form
             QuitItem = quitCommand,
             AboutItem = aboutCommand
         };
-
-        // create toolbar			
-        ToolBar = new ToolBar { Items = { clickMe } };
     }
 }
